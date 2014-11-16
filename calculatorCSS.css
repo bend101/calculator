@@ -1,0 +1,42 @@
+.divDesign {
+    text-align : center;
+    vertical-align : middle;
+    line-height : 50px;
+    background-image: url('buttonBeforeClick.png');
+    border-radius: 30px;
+    font-size: 150%;
+    width:50px;
+    height:50px;
+
+}
+
+.divDesign:hover {
+    background-image: url('buttonHover.png');
+}
+
+
+.divDesign:active {
+    background-image: url('buttonOnClick.png');
+
+}
+
+
+.bensCalculatorText
+{
+    font-size: 120%;
+    font-style: italic;
+    font-family: 'Playball', serif;
+    color: black;
+}
+
+.background
+{
+    background-image: url('background.png');
+    border-radius:6px;
+    padding : 10px ;
+    box-shadow: 4px 4px 5px #888888;
+}
+.inputClass{
+    width:100%;
+    box-sizing: border-box;
+}

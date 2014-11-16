@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        button
+        {
+            width:50px;
+            height:50px;
+        }
+    </style>
+    <script src="calculator.js"></script>
+    <script>
+        function clickButton (event)
+        {
+           var theInputBox=document.getElementById("inputBox");
+            var chTyped= (event.target.value);
+            if (chTyped==="clr")
+            {
+                theInputBox.value="";
+            }
+            else if (chTyped==="=")
+            {
+
+                theInputBox.value = calculate(theInputBox.value);
+            }
+            else
+            {
+                theInputBox.value=theInputBox.value+chTyped;
+            }
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" style="width:100%" id="inputBox"/></td>
+    </tr>
+
+    <tr>
+        <td colspan="3"></td>
+        <td><button value="clr" onclick="clickButton(event);">clr</button></td>
+    </tr>
+
+    <tr>
+        <td><button value="7" onclick="clickButton(event);">7</button></td>
+        <td><button value="8" onclick="clickButton(event);">8</button></td>
+        <td><button value="9" onclick="clickButton(event);">9</button></td>
+        <td><button value="/" onclick="clickButton(event);">/</button></td>
+    </tr>
+
+    <tr>
+        <td><button value="4" onclick="clickButton(event);">4</button></td>
+        <td><button value="5" onclick="clickButton(event);">5</button></td>
+        <td><button value="6" onclick="clickButton(event);">6</button></td>
+        <td><button value="*" onclick="clickButton(event);">*</button></td>
+    </tr>
+
+    <tr>
+        <td><button value="1" onclick="clickButton(event);">1</button></td>
+        <td><button value="2" onclick="clickButton(event);">2</button></td>
+        <td><button value="3" onclick="clickButton(event);">3</button></td>
+        <td><button value="-" onclick="clickButton(event);">-</button></td>
+    </tr>
+
+    <tr>
+        <td><button value="." onclick="clickButton(event);">.</button></td>
+        <td><button value="0" onclick="clickButton(event);">0</button></td>
+        <td><button value="=" onclick="clickButton(event);">=</button></td>
+        <td><button value="+" onclick="clickButton(event);">+</button></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
